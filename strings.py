@@ -1,3 +1,4 @@
+
 #Strings Exercise:
 #1)Write a program to find all occurrences of “USA” in a given string ignoring the case.
 Str = "Welcome to USA. usa awesome, isn't it?"
