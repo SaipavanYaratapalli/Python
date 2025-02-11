@@ -94,17 +94,25 @@ print(x)
 
 #13) Python program to find largest number and second largest number in a list
 
-list1 = [10, 20, 20, 4, 45, 45, 45, 99, 99]
-large = 0
-large2 = 0
-for i in list1:
-    if i > large:
-        if large >large2:
-            large2 = large
-    large = i
+list1 = [10, 99, 20, 4, 45, 45, 45, 20, 99]
+l1 = list(set(list1))
+print(l1)
 
-print("largest number of list:" , large)
-print("second largest number of the list:" , large2)
+for i in range(0,len(l1)):
+    for j in range(i+1,len(l1)):
+        if l1[i] >= l1[j]:
+            l1[i],l1[j] = l1[j],l1[i]
+print(l1)
+large = 0
+large2 =0
+for i in range(0,len(l1)):
+    if l1[i] >= large:
+        if large >= large2:
+            large2 = large
+    large = l1[i]
+        
+print('second largest number:' , large2)
+
 
 #14) Count occurance of an element in the list ex:8
 
